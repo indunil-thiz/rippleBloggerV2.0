@@ -35,10 +35,10 @@ $posts = mysqli_query($connection, $query);
                     <a href="<?= ROOT_URL ?>post.php?id=<?= $featured['id'] ?>"><?= $featured['title'] ?></a>
                 </h2>
                 <p class=" post_body">
-                    <?= substr($featured['body'], 0, 250) ?>
+                    <?= substr($featured['body'], 0, 250) ?>.....
                     <br />
                     <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
-                        <span class="read-more">Read More...</span>
+                        <span class="read-more">Read More</span>
                     </a>
                 </p>
 
@@ -86,9 +86,9 @@ $posts = mysqli_query($connection, $query);
                     <h3 class="post_title">
                         <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a>
                     </h3>
-                    <p class="post_body"><?= substr($post['body'], 0, 200) ?> <br />
+                    <p class="post_body"><?= substr($post['body'], 0, 200) ?>..... <br />
                         <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
-                            <span class="read-more">Read More...</span>
+                            <span class="read-more">Read More</span>
                         </a>
                     </p>
 
@@ -128,7 +128,6 @@ $posts = mysqli_query($connection, $query);
         $all_categories_query = "SELECT * FROM categories";
         $all_categories = mysqli_query($connection, $all_categories_query);
         ?>
-
         <?php while ($category = mysqli_fetch_assoc($all_categories)) : ?>
             <a href="<?= ROOT_URL ?>category-post.php?id=<?= $category['id'] ?>" class="category_button"><?= $category['title'] ?></a>
         <?php endwhile ?>

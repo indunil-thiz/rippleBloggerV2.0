@@ -35,14 +35,16 @@ if (isset($_GET['id'])) {
                         <img src="./images/<?= $post['thumbnail'] ?>" alt="blog">
                     </div>
                     <div class="post_info">
-                        <a href="<?= ROOT_URL ?>admin/category-post.html" class="category_button">Wild Life</a>
+                       
+
+                        <a href="<?= ROOT_URL ?>admin/category-post.php" class="category_button"><?= $category['title']?></a>
                         <h3 class="post_title">
                             <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
                                 <?= $post['title'] ?>
                             </a>
                         </h3>
                         <p class="post_body">
-                            <?= substr($post['body'], 0, 150) ?>
+                            <?= substr($post['body'], 0, 150)  ?>
                             <br />
                             <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
                                 Read More...

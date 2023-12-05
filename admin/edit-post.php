@@ -35,12 +35,14 @@ if (isset($_GET['id'])) {
         <?php endwhile ?>
 
       </select>
-      <textarea rows="10" placeholder="Body" name="body"><?= $post['body'] ?></textarea>
+      <textarea rows="10" placeholder="Body" name="body"><?= htmlspecialchars_decode(str_replace('<br />', PHP_EOL, $post['body'])) ?></textarea>
 
+         <?php if (isset($_SESSION['user_is_admin'])) : ?>
       <div class="form__control inline">
         <input type="checkbox" name="is_featured" id="is_feactured" value="1" checked>
         <label for="is_feactured">Featured</label>
       </div>
+        <?php endif ?>
       <div class="form_control">
         <label for="thumbnail">Change Thumbnail</label>
         <input type="file" id="thumbnail" name="thumbnail">

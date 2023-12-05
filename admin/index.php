@@ -73,6 +73,9 @@ $posts = mysqli_query($connection, $query);
                 <li><a href="<?= ROOT_URL ?>admin/index.php" class="active"><i class="uil uil-postcard"></i>
                         <h5>Manage Post</h5>
                     </a></li>
+                        <li><a href="<?= ROOT_URL ?>admin/update-profile.php" ><i class="uil uil-profile"></i>
+                        <h5>Profile</h5>
+                    </a></li>
                 <?php if (isset($_SESSION['user_is_admin'])) : ?>
                     <li><a href="<?= ROOT_URL ?>admin/all-post.php"><i class="uil uil-credit-card-search"></i>
                             <h5>Manage All Post</h5>
@@ -88,6 +91,9 @@ $posts = mysqli_query($connection, $query);
                         </a></li>
                     <li><a href="<?= ROOT_URL ?>admin/manage-categories.php"><i class="uil uil-list-ul"></i>
                             <h5>Manage Category</h5>
+                        </a></li>
+                        <li><a href="<?= ROOT_URL ?>admin/check-message.php"><i class="uil uil-whatsapp"></i>
+                            <h5>Messages</h5>
                         </a></li>
                 <?php endif ?>
             </ul>

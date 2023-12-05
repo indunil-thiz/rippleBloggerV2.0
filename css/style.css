@@ -50,8 +50,8 @@ body {
 }
 
 .container {
-  width: var(--container-width-lg);
-  max-width: 1800px;
+  /* width: var(--container-width-lg); */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -101,7 +101,7 @@ li {
 img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  background-size: cover;
 }
 
 .read-more {
@@ -110,6 +110,10 @@ img {
   color: #f2f2fe;
   padding: 3px 8px;
   margin-top: 1rem;
+}
+
+.feed {
+  white-space: pre-line;
 }
 
 /* ---- Nav Bar ---- */
@@ -275,9 +279,9 @@ nav button {
 }
 
 .category_buttons_container {
-  width: fit-content;
+  /* width: 1200px; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
@@ -636,6 +640,10 @@ select {
   /* body {
     background-color: #da0f3f;
   } */
+
+  .category_buttons_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .container {
     width: var(--container-width-md);

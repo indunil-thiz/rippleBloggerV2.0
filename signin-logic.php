@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $password = isset($_POST['password']) ? filter_var($_POST['password'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
 
     if (!$username_email) {
-        $_SESSION['signin'] = "Username or Email required";
+        $_SESSION['signin'] = "Username or Email Required";
     } elseif (!$password) {
         $_SESSION['signin'] = "Password Required";
     } else {
@@ -40,10 +40,10 @@ if (isset($_POST['submit'])) {
                 //log user in
                 header('location: ' . ROOT_URL . 'admin/');
             } else {
-                $_SESSION['signin'] = "Please check your inputs";
+                $_SESSION['signin'] = "Please Check Your Inputs";
             }
         } else {
-            $_SESSION['signin'] = "User not found!";
+            $_SESSION['signin'] = "User Not Found!";
         }
     }
     //if any problem, redirect  back to signing page with login data

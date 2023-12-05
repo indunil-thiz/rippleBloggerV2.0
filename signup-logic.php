@@ -3,6 +3,7 @@
 require 'config/database.php';
 
 // Get signup form data when the signup button is clicked
+
 if (isset($_POST['submit'])) {
   $firstname = isset($_POST['firstname']) ? filter_var($_POST['firstname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
   $lastname = isset($_POST['lastname']) ? filter_var($_POST['lastname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) : '';
@@ -14,25 +15,29 @@ if (isset($_POST['submit'])) {
   // Handle file upload
   $avatar = isset($_FILES['avatar']) ? $_FILES['avatar'] : '';
   //$avatar_tmp = isset($_FILES['avatar']['tmp_name']) ? $_FILES['avatar']['tmp_name'] : '';
-  echo $firstname, $lastname, $username, $email, $confirmpassword, $confirmpassword, $avatar;
+ // echo $firstname, $lastname, $username, $email, $confirmpassword, $confirmpassword, $avatar;
+
+  $firstname = ucfirst($firstname);
+  $lastname = ucfirst($lastname);
+  $username = ucfirst($username);
 
   //validate input values
   if (!$firstname) {
-    $_SESSION['signup'] = "Please Enter your first Name.";
+    $_SESSION['signup'] = "Please Enter Your First Name.";
   } elseif (!$lastname) {
-    $_SESSION['signup'] = "Please Enter your last Name.";
+    $_SESSION['signup'] = "Please Enter Your Last Name.";
   } elseif (!$username) {
-    $_SESSION['signup'] = "Please Enter your user Name.";
+    $_SESSION['signup'] = "Please Enter Your User Name.";
   } elseif (!$email) {
-    $_SESSION['signup'] = "Please Enter your valid email.";
+    $_SESSION['signup'] = "Please Enter Your Valid email.";
   } elseif (strlen($createpassword) < 8 || strlen($confirmpassword) < 8) {
-    $_SESSION['signup'] = "Password should be 8+ characters.";
+    $_SESSION['signup'] = "Password Should be 8+ Characters.";
   } elseif (!$avatar['name']) {
-    $_SESSION['signup'] = "Please add avatar";
+    $_SESSION['signup'] = "Please Add Avatar Image.";
   } else {
     //check if passwaord don't match
     if ($createpassword !== $confirmpassword) {
-      $_SESSION['signup'] = "Password does not match";
+      $_SESSION['signup'] = "Password Does Not Match";
     } else {
       //hash password
       $hash_password = password_hash($createpassword, PASSWORD_DEFAULT);
@@ -43,7 +48,7 @@ if (isset($_POST['submit'])) {
       $user_check_result = mysqli_query($connection, $user_check_query);
 
       if (mysqli_num_rows($user_check_result) > 0) {
-        $_SESSION['signup'] = "Username or Email already exist.";
+        $_SESSION['signup'] = "Username or Email Already Exist.";
       } else {
         //work on avatar
         //rename avater
@@ -60,14 +65,14 @@ if (isset($_POST['submit'])) {
 
         if (in_array($extension, $allowed_files)) {
           //make sure image is not too large(1mb)
-          if ($avatar['size'] < 1000000) {
+          if ($avatar['size'] < 2000000) {
             //upload avatar
             move_uploaded_file($avatar_tmp, $avatar_destination_path);
           } else {
-            $_SESSION['signup'] = 'File size too big. Should be less than 1mb';
+            $_SESSION['signup'] = 'File Size Too Big. Should Be Less Than 2mb';
           }
         } else {
-          $_SESSION['signup'] = "File Should be png,jpg,jpeg";
+          $_SESSION['signup'] = "File Should Be png,jpg or jpeg .";
         }
       }
     }
@@ -88,7 +93,7 @@ if (isset($_POST['submit'])) {
 
     if (!mysqli_errno($connection)) {
       //redirect to the login page with success message
-      $_SESSION['signup-success'] = 'Registration successful. Please log in.';
+      $_SESSION['signup-success'] = 'Registration Successful. Please Log in.';
       header('location:' . ROOT_URL . 'signin.php');
       die();
     }

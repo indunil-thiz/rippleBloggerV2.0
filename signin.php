@@ -41,7 +41,7 @@ unset($_SESSION['signin-data']);
               ?></p>
 
         </div>
-        =
+        
       <?php
 
       elseif (isset($_SESSION['signin'])) : ?>

@@ -4,8 +4,8 @@ require 'config/database.php';
 if (isset($_GET['id'])) {
     $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 
-    // Update the category_id to the desired value (e.g., 10) for posts that belong to the deleted category
-    $update_query = "UPDATE posts SET category_id = 14 WHERE category_id = $id";
+    // Update the category_id to the desired value for posts that belong to the deleted category
+    $update_query = "UPDATE posts SET category_id = 1 WHERE category_id = $id";
     $update_result = mysqli_query($connection, $update_query);
 
     if (!mysqli_errno($connection)) {

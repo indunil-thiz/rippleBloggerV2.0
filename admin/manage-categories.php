@@ -104,6 +104,9 @@ $categories = mysqli_query($connection, $query);
                     <li><a href="<?= ROOT_URL ?>admin/manage-categories.php" class="active"><i class="uil uil-list-ul"></i>
                             <h5>Manage Category</h5>
                         </a></li>
+                        <li><a href="<?= ROOT_URL ?>admin/check-message.php"><i class="uil uil-whatsapp"></i>
+                            <h5>Messages</h5>
+                        </a></li>
                 <?php endif ?>
             </ul>
         </aside>

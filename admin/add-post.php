@@ -28,7 +28,7 @@ unset($_SESSION['add-post-data']);
 
     <?php endif ?>
 
-    <form action="<?= ROOT_URL ?>admin/add-post-logic.php" method="post" enctype="multipart/form-data">
+    <form action="<?= ROOT_URL ?>admin/add-post-logic.php" method="post" enctype="multipart/form-data" class="feed">
       <input type="text" name="title" placeholder="Title" value="<?= $title ?>" />
       <select name="category">
 
@@ -36,7 +36,11 @@ unset($_SESSION['add-post-data']);
           <option value="<?= $category['id'] ?>"><?= $category['title'] ?></option>
         <?php endwhile ?>
       </select>
-      <textarea rows="10" placeholder="Body" name="body"><?= $body ?></textarea>
+
+  
+<textarea rows="10" placeholder="Body" name="body"><?= htmlspecialchars_decode($body) ?></textarea>
+
+
       <?php if (isset($_SESSION['user_is_admin'])) : ?>
         <div class="form_control inline">
           <input type="checkbox" id="is_featured" name="is_featured" value="1" checked>

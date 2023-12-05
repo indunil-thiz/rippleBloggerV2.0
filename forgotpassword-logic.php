@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['reset']['error'] = "Email is required.";
     } else {
         $fetch_user_query = "SELECT * FROM users WHERE email = ?";
+        
         $stmt = mysqli_prepare($connection, $fetch_user_query);
         mysqli_stmt_bind_param($stmt, "s", $email);
         mysqli_stmt_execute($stmt);

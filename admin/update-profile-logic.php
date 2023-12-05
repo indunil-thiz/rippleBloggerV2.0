@@ -27,9 +27,11 @@ if ($userID) {
         if ($getAvatarResult && mysqli_num_rows($getAvatarResult) > 0) {
             $currentAvatar = mysqli_fetch_assoc($getAvatarResult)['avatar'];
 
-            // Delete the old avatar if it exists
-            if (!empty($currentAvatar) && file_exists('../images/' . $currentAvatar)) {
-                unlink('../images/' . $currentAvatar);
+            // Delete the old avatar if a new one is provided
+            if (!empty($_FILES['avatar']['name'])) {
+                if (!empty($currentAvatar) && file_exists('../images/' . $currentAvatar)) {
+                    unlink('../images/' . $currentAvatar);
+                }
             }
         }
 

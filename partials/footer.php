@@ -11,12 +11,10 @@
     <article>
         <h4>Permalinks</h4>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contacts</a></li>
-
+            <li><a href="<?=ROOT_URL?>index.php">Home</a></li>
+            <li><a href="<?=ROOT_URL?>blog.php">Blog</a></li>
+            <li><a href="<?=ROOT_URL?>about.php">About</a></li>
+            <li><a href="<?=ROOT_URL?>contact.php">Contacts</a></li>
 
         </ul>
     </article>

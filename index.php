@@ -35,9 +35,11 @@ $posts = mysqli_query($connection, $query);
                     <a href="<?= ROOT_URL ?>post.php?id=<?= $featured['id'] ?>"><?= $featured['title'] ?></a>
                 </h2>
                 <p class=" post_body">
+                    
                     <?= substr($featured['body'], 0, 250) ?>.....
                     <br />
-                    <a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>">
+
+                    <a href="<?= ROOT_URL ?>post.php?id=<?= $featured['id'] ?>">
                         <span class="read-more">Read More</span>
                     </a>
                 </p>

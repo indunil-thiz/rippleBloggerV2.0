@@ -63,7 +63,7 @@ $dislikeCount = is_null($dislikeCount) ? 0 : $dislikeCount;
       <button id="likeBtn" class="like-btn" onclick="likeDislikePost(<?= $post['id'] ?>, 'like')">Like <span id="likeCount"><?= $likeCount ?></span></button>
       <button id="dislikeBtn" class="dislike-btn" onclick="likeDislikePost(<?= $post['id'] ?>, 'dislike')">Dislike <span id="dislikeCount"><?= $dislikeCount ?></span></button>
       <button id="commentBtn" class="comment-btn">Comment <span id="commentCount"><?= $post['comments_count'] ?></span></button>
-      <button id="shareBtn" class="share-btn">Share</button>
+     
     </div>
 
     <div class="comments-section" id="commentsSection">

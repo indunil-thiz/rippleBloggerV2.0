@@ -33,8 +33,11 @@ $posts = mysqli_query($connection, $query);
                 <li><a href="<?= ROOT_URL ?>admin/index.php"><i class="uil uil-postcard"></i>
                         <h5>Manage Post</h5>
                     </a></li>
+                   <li><a href="<?= ROOT_URL ?>admin/update-profile.php" ><i class="uil uil-user-circle"></i>
+                        <h5>Profile</h5>
+                    </a></li>
                 <?php if (isset($_SESSION['user_is_admin'])) : ?>
-                    <li><a href="<?= ROOT_URL ?>admin/all-post.php" class="active"><i class="uil uil-user-plus"></i>
+                       <li><a href="<?= ROOT_URL ?>admin/all-post.php"><i class="uil uil-credit-card-search"></i>
                             <h5>Manage All Post</h5>
                         </a></li>
                     <li><a href="<?= ROOT_URL ?>admin/add-user.php"><i class="uil uil-user-plus"></i>

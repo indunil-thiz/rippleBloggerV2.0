@@ -73,7 +73,7 @@ $posts = mysqli_query($connection, $query);
                 <li><a href="<?= ROOT_URL ?>admin/index.php" class="active"><i class="uil uil-postcard"></i>
                         <h5>Manage Post</h5>
                     </a></li>
-                        <li><a href="<?= ROOT_URL ?>admin/update-profile.php" ><i class="uil uil-profile"></i>
+                        <li><a href="<?= ROOT_URL ?>admin/update-profile.php" ><i class="uil uil-user-circle"></i>
                         <h5>Profile</h5>
                     </a></li>
                 <?php if (isset($_SESSION['user_is_admin'])) : ?>

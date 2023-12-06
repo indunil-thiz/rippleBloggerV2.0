@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Link Style Sheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav_container">
+        <a href="index.html" class="nav_logo">RippleBlogger</a>
+
+        <ul class="nav_items">
+          <li><a href="../pages/blog.html">Blog</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+          <li><a href="../pages/sign-in.html">Signin</a></li>
+          <li class="nav_profile">
+            <div class="avatar">
+              <img src="../images/avatar1.jpg" alt="nav-bar-profile-images" />
+            </div>
+            <ul>
+              <li><a href="../pages/dashboard.html">Dashboard</a></li>
+              <li><a href="../pages/logout.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button id="open_nav_btn"><i class="uil uil-bars"></i></button>
+        <button id="close_nav_btn"><i class="uil uil-multiply"></i></button>
+      </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <section class="single_post">
+      <div class="container single_post_container">
+        <h2>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+          ipsum.
+        </h2>
+        <div class="post_author">
+          <div class="post_author_avatar">
+            <img src="../images/avatar4.jpg" alt="" />
+          </div>
+
+          <div class="post_author_info">
+            <h5>By: Miller kane</h5>
+            <small>June 18 ,2022 - 20:41 p.m</small>
+          </div>
+        </div>
+
+        <div class="single_post_thumbnail">
+          <img src="../images/blog33.jpg" alt="" />
+        </div>
+
+        <div class="single_post_content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+            ipsam odit excepturi dolores, laborum et explicabo architecto earum
+            iure nostrum repudiandae dolore ratione quos corrupti dolorem eaque
+            quasi, totam pariatur quod corporis? Laborum debitis minima,
+            reiciendis ex adipisci nostrum veritatis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+            ipsam odit excepturi dolores, laborum et explicabo architecto earum
+            iure nostrum repudiandae dolore ratione quos corrupti dolorem eaque
+            quasi, totam pariatur quod corporis? Laborum debitis minima,
+            reiciendis ex adipisci nostrum veritatis.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+            ipsam odit excepturi dolores, laborum et explicabo architecto earum
+            iure nostrum repudiandae dolore ratione quos corrupti dolorem eaque
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+            ipsam odit excepturi dolores, laborum et explicabo architecto earum
+            iure nostrum repudiandae dolore ratione quos corrupti dolorem eaque
+            quasi, totam pariatur quod corporis? Laborum debitis minima,
+            reiciendis ex adipisci nostrum veritatis.quasi, totam pariatur quod
+            corporis? Laborum debitis minima, reiciendis ex adipisci nostrum
+            veritatis.
+          </p>
+        </div>
+
+        <!-- New Buttons and Functionality -->
+        <div class="buttons-container">
+          <button id="likeBtn" class="like-btn">
+            Like <span id="likeCount">0</span>
+          </button>
+          <button id="dislikeBtn" class="dislike-btn">
+            Dislike <span id="dislikeCount">0</span>
+          </button>
+          <button id="commentBtn" class="comment-btn">
+            Comment <span id="commentCount">3</span>
+          </button>
+          <button id="shareBtn" class="share-btn">Share</button>
+        </div>
+
+        <div class="comments-section" id="commentsSection">
+          <!-- Default Comments -->
+          <div class="comment">
+            <div class="post_author">
+              <div class="post_author_avatar">
+                <img src="../images/avatar11.jpg" alt="" />
+              </div>
+
+              <div class="post_author_info">
+                <h5>By: Miller kane</h5>
+                <small>June 18, 2022 - 20:41 p.m</small>
+              </div>
+            </div>
+            <p class="post_body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              ipsam odit excepturi dolores, laborum et explicabo architecto
+              earum.
+            </p>
+          </div>
+
+          <div class="comment">
+            <div class="post_author">
+              <div class="post_author_avatar">
+                <img src="../images/avatar12.jpg" alt="" />
+              </div>
+
+              <div class="post_author_info">
+                <h5>By: Another User</h5>
+                <small>June 19, 2022 - 12:30 p.m</small>
+              </div>
+            </div>
+            <p class="post_body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              ipsam odit excepturi dolores, laborum et explicabo architecto
+              earum.
+            </p>
+          </div>
+
+          <div class="comment">
+            <div class="post_author">
+              <div class="post_author_avatar">
+                <img src="../images/avatar13.jpg" alt="" />
+              </div>
+
+              <div class="post_author_info">
+                <h5>By: Yet Another User</h5>
+                <small>June 20, 2022 - 08:15 a.m</small>
+              </div>
+            </div>
+            <p class="post_body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              ipsam odit excepturi dolores, laborum et explicabo architecto
+              earum.
+            </p>
+          </div>
+
+          <!-- Add more comments as needed -->
+          <div class="seeall">
+            <button id="seeAllBtn" class="see-all-btn">See All &rarr;</button>
+          </div>
+
+          <div class="user-comment-section">
+            <div class="post_author">
+              <div class="post_author_avatar">
+                <img src="../images/avatar1.jpg" alt="" />
+              </div>
+              <div class="post_author_info">
+                <input
+                  type="text"
+                  id="userComment"
+                  placeholder="Write a comment..."
+                />
+                <button id="sendCommentBtn">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="share-popup" id="sharePopup">
+      <!-Share popup content -->
+    <div class="social-media-icon">Facebook</div>
+    <div class="social-media-icon">Twitter</div>
+    <div class="social-media-icon">Instagram</div>
+    <!-- Add more icons as needed 
+      <button id="closePopupBtn">Close</button>
+    </div> -->
+
+    <footer>
+      <div class="footer_social">
+        <a href="https://youtube.com" target="_blank"
+          ><i class="uil uil-youtube"></i
+        ></a>
+        <a href="https://facebook.com" target="_blank"
+          ><i class="uil uil-facebook-f"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="uil uil-instagram-alt"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="uil uil-linkedin"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="uil uil-twitter"></i
+        ></a>
+      </div>
+
+      <div class="container footer_container">
+        <article>
+          <h4>Category</h4>
+          <ul>
+            <li><a href="">Art</a></li>
+            <li><a href="">Wild Life</a></li>
+            <li><a href="">Travel</a></li>
+            <li><a href="">Music</a></li>
+            <li><a href="">Science & Technology</a></li>
+            <li><a href="">Music</a></li>
+            <li><a href="">Food</a></li>
+          </ul>
+        </article>
+        <article>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="">Online Support</a></li>
+            <li><a href="">Call Numbers</a></li>
+            <li><a href="">Emails</a></li>
+            <li><a href="">Social Support</a></li>
+            <li><a href="">Location</a></li>
+          </ul>
+        </article>
+        <article>
+          <h4>Blog</h4>
+          <ul>
+            <li><a href="">Safety</a></li>
+            <li><a href="">Repair</a></li>
+            <li><a href="">Recent</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+        </article>
+        <article>
+          <h4>Permalinks</h4>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contacts</a></li>
+          </ul>
+        </article>
+      </div>
+      <div class="footer_copyright">
+        <small>Copyright &copf; 2023 DevGenius</small>
+      </div>
+    </footer>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
